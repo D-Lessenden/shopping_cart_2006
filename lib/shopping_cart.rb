@@ -50,11 +50,8 @@ attr_reader :name
   end
 
   def products_by_category(type)
-    new_cat = []
-    @product.each do |x|
-      #require 'pry'; binding.pry
-      new_cat << if x.category == type
-      end
+    new_cat = @product.select do |x|
+          x.category == type
     end
   end
 
